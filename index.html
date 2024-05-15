@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Apoiadores do Mês</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+        <div class="container">
+        <h1>Ranking de Apoiadores do Mês</h1>
+        <!-- Texto simplificado com os ícones -->
+        <p>Pontos de referência:      💎 100 Bits = 1 Ponto  ------  💲 R$5 em PIX = 1 Ponto ------- ⭐ 1 Sub = 1 Ponto</p>
+        <div id="podio">
+            <div id="primeiro">
+                <h2>1º Lugar</h2>
+                <p id="primeiro-nome">Ninguém</p>
+                <img src="trofeu.png" alt="Troféu" id="trofeu">
+            </div>
+            <div id="segundo">
+                <h2>2º Lugar</h2>
+                <p id="segundo-nome">Ninguém</p>
+                <img src="trofeu prata.png" alt="Troféu" id="trofeu">
+            </div>
+            <div id="terceiro">
+                <h2>3º Lugar</h2>
+                <p id="terceiro-nome">Ninguém</p>
+                <img src="trofeu bronze.png" alt="Troféu" id="trofeu">
+            </div>
+        </div>
+		
+<div id="totais">
+    <h2>Totais do Mês: </h2>
+    <span>Total de Bits: <span id="total-bits">0</span></span>
+    <span>Total de PIX: <span id="total-pix">0</span></span>
+    <span>Total de Subs: <span id="total-subs">0</span></span>
+</div>
+
+<div id="ultimas-doacoes">
+    <h2>Últimas Doações</h2>
+    <p>Últimos 3 Bits: <span id="ultimos-bits">Nenhum</span></p>
+    <p>Últimos 3 PIX: <span id="ultimos-pix">Nenhum</span></p>
+    <p>Últimos 3 Subs: <span id="ultimos-subs">Nenhum</span></p>
+</div>
+		
+		
+        <div id="ranking">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                        <th>💎Bits</th>
+                        <th>💲PIX</th>
+                        <th>⭐Subs</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- Aqui serão listados os apoiadores -->
+                </tbody>
+            </table>
+            <p id="vazio">Vazio - 0 pontos</p>
+        </div>
+        <div id="form">
+            <div class="form-group centered-options">
+                <label for="apoiador">Apoiador:</label>
+                <select id="apoiador"></select>
+            </div>
+            <div class="form-group centered-options">
+                <label for="bits">Bits:</label>
+                <input type="number" id="bits" placeholder="Digite o valor em bits">
+            </div>
+            <div class="form-group centered-options">
+                <label for="pix">PIX:</label>
+                <input type="number" id="pix" placeholder="Digite o valor em reais">
+            </div>
+            <div class="form-group centered-options">
+                <label for="subs">Subs:</label>
+                <input type="number" id="subs" placeholder="Digite o número de subs">
+            </div>
+            <div class="botoes">
+                <button onclick="adicionarDoacao()">Adicionar Doação</button>
+                <button onclick="adicionarApoiador()">Adicionar Apoiador</button>
+                <button onclick="salvarTabela()">Salvar Tabela</button>
+                <button onclick="carregarTabela()">Carregar Tabela</button>
+                <button onclick="zerarTudo()">Zerar Tudo</button>
+                <button onclick="exportarRanking()">Exportar Ranking Geral</button>
+                <button onclick="exportarTabela()">Exportar Tabela</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
